@@ -1,10 +1,10 @@
 /*
  * @Author: Jiwei
  * @Date: 2021-07-19 09:22:46
- * @LastEditTime: 2022-01-10 09:56:06
+ * @LastEditTime: 2022-01-14 15:27:51
  * @LastEditors: Jiwei
  * @Description:
- * @FilePath: \Go_WorkSpace\src\jvmgo\ch01\cmd.go
+ * @FilePath: \Go_WorkSpace\src\jvmgo\ch02\cmd.go
  *
  */
 package main
@@ -21,6 +21,7 @@ type Cmd struct {
 	cpOption    string
 	class       string
 	args        []string
+	XjreOption  string
 }
 
 func parseCmd() *Cmd {
@@ -31,6 +32,7 @@ func parseCmd() *Cmd {
 	flag.BoolVar(&cmd.versionFlag, "version", false, "print version message")
 	flag.StringVar(&cmd.cpOption, "classpath", "", "input classpath")
 	flag.StringVar(&cmd.cpOption, "cp", "", "input classpath")
+	flag.StringVar(&cmd.XjreOption, "Xjre", "", "path to jre")
 	flag.Parse()
 	args := flag.Args()
 	if len(args) > 0 {
