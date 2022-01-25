@@ -1,10 +1,10 @@
 /*
  * @Author: Jiwei
  * @Date: 2022-01-18 15:45:25
- * @LastEditTime: 2022-01-18 17:50:00
+ * @LastEditTime: 2022-01-21 11:44:33
  * @LastEditors: Jiwei
  * @Description:
- * @FilePath: \Go_WorkSpace\src\jvmgo\ch02\classpath\classpath.go
+ * @FilePath: \jvmgo\ch03\classpath\classpath.go
  *
  */
 

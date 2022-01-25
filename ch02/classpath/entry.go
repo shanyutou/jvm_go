@@ -1,7 +1,7 @@
 /*
  * @Author: Jiwei
  * @Date: 2022-01-14 15:20:14
- * @LastEditTime: 2022-01-18 10:18:34
+ * @LastEditTime: 2022-01-20 16:41:15
  * @LastEditors: Jiwei
  * @Description:entry
  * @FilePath: \Go_WorkSpace\src\jvmgo\ch02\classpath\entry.go
@@ -23,7 +23,14 @@ type Entry interface {
 
 func newEntry(path string) Entry {
 	if strings.Contains(path, pathListSeparator) {
-		return nil
+		return newCompositeEntry(path)
+	}
+	if strings.HasSuffix(path, "*") {
+		return newWildcardEntry(path)
+	}
+	if strings.HasSuffix(path, ".jar") || strings.HasSuffix(path, ".JAR") ||
+		strings.HasSuffix(path, ".zip") || strings.HasSuffix(path, ".ZIP") {
+		return newZipEntry(path)
 	}
 
 	return nil

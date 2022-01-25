@@ -1,10 +1,10 @@
 /*
  * @Author: Jiwei
  * @Date: 2022-01-18 09:48:28
- * @LastEditTime: 2022-01-18 10:18:57
+ * @LastEditTime: 2022-01-21 11:44:36
  * @LastEditors: Jiwei
  * @Description:
- * @FilePath: \Go_WorkSpace\src\jvmgo\ch02\classpath\entry_composite.go
+ * @FilePath: \jvmgo\ch03\classpath\entry_composite.go
  *
  */
 package classpath
